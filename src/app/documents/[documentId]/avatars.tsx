@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { ClientSideSuspense } from "@liveblocks/react";
 import { useOthers, useSelf } from "@liveblocks/react/suspense";
 import Image from "next/image";
+  
 
 const AVATAR_SIZE = 36;
 
@@ -18,6 +19,10 @@ export const Avatars = () => {
 const AvatarStack = () => {
     const users = useOthers();
     const currentUser = useSelf();
+
+    console.log("🧍 currentUser", currentUser?.info);
+    console.log("👥 otherUsers", users.map(u => u.info));
+    
 
     if (users.length === 0) return null;
 
@@ -61,7 +66,7 @@ const Avatar = ({ src, name }: AvatarProps) => {
                 src={src}
                 width={AVATAR_SIZE}
                 height={AVATAR_SIZE}
-                className="rounded-full"
+                className="size-ful rounded-full"
             />
         </div>
     );

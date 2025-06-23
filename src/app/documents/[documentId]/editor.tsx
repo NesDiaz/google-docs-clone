@@ -6,7 +6,7 @@ import Table from '@tiptap/extension-table'
 import TableCell from '@tiptap/extension-table-cell'
 import TableHeader from '@tiptap/extension-table-header'
 import TableRow from '@tiptap/extension-table-row'
-import Image from '@tiptap/extension-image'
+
 import TextAlign from '@tiptap/extension-text-align'
 import Link from '@tiptap/extension-link'
 import FontFamily from '@tiptap/extension-font-family'
@@ -78,7 +78,6 @@ export const Editor = ({ initialContent }: EditorProps) => {
                 history: false,
             }),
             TextStyle,
-            Image,
             LineHeightExtension.configure({
                 types: ["heading", "paragraph"],
                 defaultLineHeight: "normal"
@@ -97,9 +96,7 @@ export const Editor = ({ initialContent }: EditorProps) => {
                 multicolor: true,
             }),
             FontFamily,
-            TextStyle,
             Underline,
-            Image,
             ImageResize, 
             Table,
             TableRow,

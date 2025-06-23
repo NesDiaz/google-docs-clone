@@ -56,7 +56,6 @@ import {
 
 const LineHeightButton = () => {
   const { editor } = useEditorStore();
-  console.log('setLineHeight command:', editor?.commands.setLineHeight)
 
   const lineHeights = [
     { label: "Default", value: "normal" },
@@ -582,8 +581,6 @@ const ToolbarButton = ({
 
 export const Toolbar = () => {
   const { editor } = useEditorStore();
-
-  console.log("Toolbar editor: ", { editor });
 
   const sections: {
     label: string;

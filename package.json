@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.23",
     "@clerk/nextjs": "^6.5.1",
     "@hookform/resolvers": "^5.0.1",
-    "@liveblocks/client": "^2.12.2",
+    "@liveblocks/client": "^2.24.3",
     "@liveblocks/node": "^2.12.2",
     "@liveblocks/react": "^2.12.2",
     "@liveblocks/react-tiptap": "^2.12.2",
@@ -67,7 +68,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "convex": "^1.17.3",
-    "date-fns": "^4.1.0",
+    "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "google-docs-clone": "file:",
     "input-otp": "^1.4.2",

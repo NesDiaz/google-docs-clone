@@ -140,6 +140,7 @@ export const updateById = mutation({
 
     if (!isOwner && !isOrganizationMember) {
       throw new ConvexError("Unauthorized");
+      
     }
 
     return await ctx.db.patch(args.id, { title: args.title });
@@ -163,12 +164,14 @@ export const getById = query({
     }
 
     const isOwner = document.ownerId === user.subject;
-    const isOrgMember = !!(document.organizationId && document.organizationId === organizationId);
+    const isOrganizationMember = 
+    !!(document.organizationId && document.organizationId === organizationId);
 
-    if (!isOwner && !isOrgMember) {
+    if (!isOwner && !isOrganizationMember) {
       throw new ConvexError("Unauthorized");
     }
 
-    return document;
+    return { document, isOwner, isOrganizationMember};
+
   },
 });
